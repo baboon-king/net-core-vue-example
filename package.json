@@ -1,0 +1,19 @@
+{
+  "name": "vueexample",
+  "version": "1.0.0",
+  "description": "Vue with NPM tutorial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Hello World\" && exit 0",
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vue": "^2.6.12",
+    "webpack": "^5.37.1"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.7.0"
+  }
+}
