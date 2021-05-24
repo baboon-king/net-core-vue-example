@@ -1,9 +1,22 @@
+const CopyPlugin = require("copy-webpack-plugin");
+/**
+ * @type import('webpack').Configuration
+ */
 module.exports = {
-    entry: {
-        index: './src/js/index.js',
-        about: './src/js/about.js',
-    },
-    output: {
-        filename: 'js/[name]/[name].js'
-    }
-}
+  mode: "development",
+  entry: {
+    index: "./src/js/about.js",
+    about: "./src/js/index.js",
+  },
+  output: {
+    filename: "js/[name].js",
+  },
+  plugins: [
+    new CopyPlugin({
+      patterns: [
+        { from: "./src/index.html", to: "" },
+        { from: "./src/about.html", to: "" },
+      ],
+    }),
+  ],
+};
