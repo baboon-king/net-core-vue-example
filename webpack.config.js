@@ -13,6 +13,9 @@ var htmlPages = glob.sync("./src/*.html").map((path) => {
     inject: true,
   });
 });
+/**
+ * @type import('webpack').Configuration
+ */
 module.exports = {
   // watch: true,
   entry: {
@@ -25,10 +28,6 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
   },
   devServer: {
-    contentBase: path.resolve(__dirname, "dist", "pages"),
-    host: "localhost",
-    port: 8081,
-    open: true,
   },
   // optimization: {
   //     splitChunks: {
@@ -42,9 +41,17 @@ module.exports = {
         test: /\.vue$/,
         loader: "vue-loader",
       },
+      // 它会应用到普通的 `.js` 文件
+      // 以及 `.vue` 文件中的 `<script>` 块
       {
-        test: /\.css$/i,
-        loader: ["vue-style-loader", "css-loader"],
+        test: /\.js$/,
+        loader: "babel-loader",
+      },
+      // 它会应用到普通的 `.css` 文件
+      // 以及 `.vue` 文件中的 `<style>` 块
+      {
+        test: /\.css$/,
+        use: ["vue-style-loader", "css-loader"],
       },
     ],
   },

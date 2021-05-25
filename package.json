@@ -6,8 +6,9 @@
   "scripts": {
     "test": "echo \"Hello World\" && exit 0",
     "clear": "rm -rf dist",
-    "build": "webpack --mode development",
-    "build:dev": "webpack --mode development && webpack-dev-server"
+    "build": "npm run clear && webpack --mode development",
+    "build:dev": "npm run clear && webpack --mode development",
+    "dev": "webpack-dev-server"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +16,7 @@
     "vue": "^2.6.12"
   },
   "devDependencies": {
+    "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^4.0.0-alpha.0",
     "copy-webpack-plugin": "^9.0.0",
     "css-loader": "^5.2.6",
@@ -25,6 +27,7 @@
     "vue-template-compiler": "^2.6.12",
     "webpack": "^5.37.1",
     "webpack-cli": "^4.7.0",
-    "webpack-dev-server": "^3.11.2"
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.7.3"
   }
 }
