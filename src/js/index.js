@@ -1,8 +1,14 @@
-import Vue from "../../node_modules/vue";
+import Vue from "vue/dist/vue";
 
-        var app = new Vue({
-            el: '#app',
-            data: {
-                message: "Hello Index"
-            }
-        })
+import HelloWorld from '../components/HelloWorld.vue'
+
+var app = new Vue({
+	el: '#app',
+	data: {
+		message: "Hello Index"
+	},
+	// 注册该插件
+	components: {
+		HelloWorld
+	}
+})
