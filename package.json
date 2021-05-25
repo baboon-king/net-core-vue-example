@@ -5,12 +5,17 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Hello World\" && exit 0",
+<<<<<<< HEAD
     "build": "webpack --mode development",
     "build:dev": "webpack --mode development && webpack-dev-server"
+=======
+    "build": "rm -rf dist & webpack"
+>>>>>>> c24e629c834e003be38e72cdf7258abae3375e16
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+<<<<<<< HEAD
     "glob": "^7.1.7",
     "vue": "^2.6.12",
     "webpack": "^5.37.1"
@@ -24,5 +29,13 @@
     "vue-template-compiler": "^2.6.12",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.2"
+=======
+    "vue": "^2.6.12"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^9.0.0",
+    "webpack": "^5.37.1",
+    "webpack-cli": "^4.7.0"
+>>>>>>> c24e629c834e003be38e72cdf7258abae3375e16
   }
 }

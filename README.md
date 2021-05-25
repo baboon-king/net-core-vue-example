@@ -1,5 +1,6 @@
-使用webpack
+使用 webpack
 
-<pre class="dark">
-npm run build
-</pre>
+1.  `npm i`
+2.  `npm run build `
+3.  `npm i -g serve`
+4.  `serve dist`
