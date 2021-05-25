@@ -1,21 +1,21 @@
 <template>
-	<div>
-		{{message}}
-	</div>
+  <div>
+    {{ message }}
+  </div>
 </template>
 
 <script>
-	export default {
-		data() {
-			return {
-				message: "Hello World, Component"
-			}
-		}
-	}
+export default {
+  data() {
+    return {
+      message: "Hello World, Component",
+    };
+  },
+};
 </script>
 
 <style>
-	div {
-		color: red;
-	}
+div {
+  color: red;
+}
 </style>
